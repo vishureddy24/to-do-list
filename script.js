@@ -113,6 +113,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Sync across tabs
+    window.addEventListener('storage', (e) => {
+        if (e.key === 'tasks') {
+            tasks = JSON.parse(e.newValue) || [];
+            renderTasks();
+        }
+    });
+
     // Initial render
     renderTasks();
 });
