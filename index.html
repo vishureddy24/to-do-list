@@ -25,8 +25,8 @@
 
         <section class="input-section">
             <div class="input-wrapper">
-                <input type="text" id="task-input" placeholder="What needs to be done?" autocomplete="off">
-                <button id="add-task-btn" aria-label="Add Task">
+                <input type="text" id="task-input" placeholder="Add a new task..." autocomplete="off">
+                <button id="add-task-btn" aria-label="Add Task" title="Add Task (Enter)">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
                 </button>
             </div>
@@ -36,6 +36,11 @@
             <ul id="task-list">
                 <!-- Tasks will be injected here -->
             </ul>
+            <div id="empty-state" class="empty-state hidden">
+                <div class="empty-icon">🎯</div>
+                <p class="empty-title">No tasks yet</p>
+                <p class="empty-subtitle">Start by adding your first task above</p>
+            </div>
         </section>
 
         <footer>
